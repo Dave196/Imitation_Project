@@ -19,6 +19,9 @@ PDF to view ![report](Kyere_Dave_Dissertation.pdf)
 in the `baseImitationRule(Color[][] grid, Color[][] newgrid)` method.
 * Select either base or memory imitation `grid =baseImitationRule(grid, newGrid);` location: location: GUI.java/Game(Class)/task(class)
 in the `run()` method
+
+## How the model works
+
 		    		 
 
 
