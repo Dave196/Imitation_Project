@@ -21,6 +21,11 @@ in the `baseImitationRule(Color[][] grid, Color[][] newgrid)` method.
 in the `run()` method
 
 ## How the model works
+A GUI would appear during runtime. controls include start,pause,stop and a speed slider. The states of the cells can also be changed by clicking.
+After 500 rounds, a histogram plot would be produced displaying the data from the simulation.
+
+![GUI CA model](model_start.png)
+![histogram plot](plot.png)
 
 		    		 
 
