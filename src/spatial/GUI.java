@@ -6,9 +6,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import java.util.*;
-import java.util.List;
 import java.util.Timer;
-import java.util.stream.Stream;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -137,10 +135,8 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 		private int col = Width / resolution ;
 		private int row = (Height / resolution) -square;
 		//Colours
-		private Color black = Color.BLACK;
 		private Color w = Color.WHITE;
 		private Color gr = Color.DARK_GRAY;
-		private Color cyan = Color.CYAN;
 		private Color red = Color.RED;
 		private Color green = Color.GREEN;
 		
@@ -211,6 +207,7 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 		private int spacing = 1;
 	    private Timer timer = new Timer();
 	    
+	    //Game constructor
 		public Game() {
 			this.setPreferredSize(new Dimension(Width,Height));
 			this.setLayout(null);
@@ -581,7 +578,6 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 			Color newColour = grid[x][y];
 			//Largest score 
 			int LS = 0;
-			
 			int mutation = rand.nextInt(400);
 			
 			for (int i = -1; i<2; i++) {
@@ -594,9 +590,7 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 							LS = sumGridScore[cols][rows];
 							newColour = grid[cols][rows];
 						}
-					
 					}
-					
 				}
 			}
 			 
@@ -608,12 +602,8 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 					newColour = green;
 				}
 			}
-				
-			
-			//System.out.println("x: "+x+" y:"+y+"highest score"+LS+" Colour:"+newColour);
 			
 			return newColour;
-				
 		}
 		
 		private void play(Graphics g) {
@@ -670,15 +660,15 @@ public class GUI extends JFrame implements ActionListener,ChangeListener {
 		}
 		
 		public class task extends TimerTask  {
-			//conwayRules
-			//socialDistanceRule
 			 
 		     @Override
 		     public void run() {
 		    	 Color newGrid[][] = new Color[col][row];
 		    	 
 		    	 if(State == State.PLAY) {
-		    		 grid =memoryImitationRule(grid, newGrid);
+		    		 //memoryImitationRule
+		    		 //baseImitationRule
+		    		 grid =baseImitationRule(grid, newGrid);
 		    		 //Stop the game after 500 rounds
 		    	 } 
 		    	 

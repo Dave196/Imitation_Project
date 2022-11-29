@@ -1,8 +1,4 @@
-package spatial;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
+ package spatial;
 
 public class Main {
 	
@@ -10,7 +6,6 @@ public class Main {
 	static Thread game;
 	public static boolean end = false;
 	
-
 	public static void main(String[] args) {
        //Run the simulation
        Thread newGame = new Thread(new gameThread());
@@ -29,9 +24,8 @@ public class Main {
     	   // TODO Auto-generated catch block
     	   e.printStackTrace();
        }
-       //Produce a grapth
+       //Produce a graph
        endGame.start();
-       
        
 	}
 	

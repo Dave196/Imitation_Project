@@ -14,9 +14,6 @@ public class gameThread implements Runnable {
 				 return;
 				 
 			 }
-				 
-		
 		}
 	}
-
 }
